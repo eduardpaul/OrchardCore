@@ -1,0 +1,16 @@
+@model OrchardCore.AzureSearch.Settings.ContentPickerFieldAzureSearchEditorSettings
+
+<div class="field-editor field-editor-AzureSearch">
+    <fieldset class="form-group">
+        <div class="row col-sm-6">
+            <label asp-for="Index">@T["Index"]</label>
+            <select asp-for="Index" class="form-control">
+                @foreach (var index in Model.Indices)
+                {
+                    <option value="@index">@index</option>
+                }
+            </select>
+            <span class="hint">@T["The AzureSearch index to query for content items"]</span>
+        </div>
+    </fieldset>
+</div>
